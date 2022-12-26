@@ -4,54 +4,150 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/stylesown.css">
   <title>Laconio</title>
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-  <script src="scripts/jquery.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="scripts/head.js"></script>
+  <script src="scripts/menu.js"></script>
 </head>
 
 
 <body>
-  <div id="Myid">
-    <p><img onclick="closeClose()" src="/images/close.png" height="72px" width="72px"></p>
-    <span>
-      <ul>
-        <li><a href="https://rules.laconio.me/">Правила</a></li>
-        <li><a href="https://wiki.laconio.me/">Руководство</a></li>
-        <li><a href="https://laconio.me/">Магазин</a></li>
-        <li><a href="http://map.laconio.me:8081/">Карта</a></li>
-      </ul>
-      <div>
-        <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-        <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-        <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-        <a href="ССЫЛКУ!"><img src="images/2.svg" alt=""></a>
+
+  <section class="up">
+    <div class="bg-fon">
+      <header id="head">
+        <span class="social">
+          <a href="ССЫЛКУ!"><img src="images/tt.svg" alt=""></a>
+          <a href="ССЫЛКУ!"><img src="images/tg.svg" alt=""></a>
+          <a href="ССЫЛКУ!"><img src="images/ds.svg" alt=""></a>
+        </span>
+        <span class="brand">
+          <img class="logo" src="/images/Загогулина.svg">
+
+        </span>
+
+        <nav class="menu">
+          <ul>
+            <li><a href="https://rules.laconio.me/">Правила</a></li>
+            <li><a href="https://wiki.laconio.me/">Руководство</a></li>
+            <li><a href="https://laconio.me/">Магазин</a></li>
+            <li><a href="http://map.laconio.me:8081/">Карта</a></li>
+          </ul>
+        </nav>
+        <div class="btn">
+          <span></span>
+        </div>
+      </header>
+      <div>Laconio - это Майнкрафт RP-Сервер,
+        где вы можете стать лидером государства, воином, строителем, торговцем
+        или другим деятелем на просторах карты из реального мира.
       </div>
-    </span>
-  </div>
-  <header id="head">
-    <span>
-      <img class="logo" src="/images/Загогулина.svg">
-      <h1 class="caption">Laconio</h1>
-    </span>
-    <nav class="menu">
-      <ul>
-        <li><a href="https://rules.laconio.me/">Правила</a></li>
-        <li><a href="https://wiki.laconio.me/">Руководство</a></li>
-        <li><a href="https://laconio.me/">Магазин</a></li>
-        <li><a href="http://map.laconio.me:8081/">Карта</a></li>
-      </ul>
-    </nav>
-    <div class="social">
-      <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-      <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-      <a href="ССЫЛКУ!"><img src="images/1.svg" alt=""></a>
-      <a href="ССЫЛКУ!"><img src="images/2.svg" alt=""></a>
-    </div>
-    <div class="adapt" onclick="openOpen() ">
-      <img src="/images/menu.png" height="72px" width="60px">
+      <div>
+      
+      </div>
     </div>
 
+  </section>
+  <h3>Общее:</h3>
+  <ul class="hs">
+    <li class="item">
+      <img src="/images/elitr.png">
+      <h3 class="title">Элитры</h3>
+      <p class="price">50 &#8372/1 шт.</p>
+    </li>
+    <li class="item">
+      <img src="/images/xp.png">
+      <h3 class="title">10 уровней опыта</h3>
+      <p class="price">20 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/xp.png">
+      <h3 class="title">30 уровней опыта</h3>
+      <p class="price">50 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/xp.png">
+      <h3 class="title">55 уровней опыта</h3>
+      <p class="price">75 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/falsen.jpg">
+      <h3 class="title">Префикс около ника</h3>
+      <p class="price">250 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/">
+      <h3 class="title">Префикс около ника</h3>
+      <p class="price">250 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/dobeln.jpg">
+      <h3 class="title">Дёбельн</h3>
+      <p class="price">80 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/broc.jpg">
+      <h3 class="title">Брок</h3>
+      <p class="price">200 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/kost.jpg">
+      <h3 class="title">Костюшко</h3>
+      <p class="price">200 &#8372</p>
+    </li>
+  </ul>
 
-  </header>
-  </html>
+  <h3>Динамическая карта:</h3>
+  <ul class="com">
+    <li class="item">
+      <img src="/images/town.png">
+      <h3 class="title">Иконка города на динкарте</h3>
+      <p class="price">50 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/nation.png">
+      <h3 class="title">Иконка нации на динкарте</h3>
+      <p class="price">60 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/">
+      <h3 class="title">/t set mapcolor</h3>
+      <p class="price">60 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/">
+      <h3 class="title">/n set mapcolor</h3>
+      <p class="price">60 &#8372</p>
+    </li>
+    <li class="item">
+      <img src="/images/gravina.jpg">
+      <h3 class="title">Гравина</h3>
+      <p class="price">60 &#8372</p>
+    </li>
+  </ul>
+
+  <h3>Строительство и экономика:</h3>
+  <ul class="things">
+    <li class="item">
+      <img src="/images/ShulkerClosedBetter.webp">
+      <h3 class="title">Шалкер-ящик</h3>
+      <p class="price">10 &#8372/1 шт.</p>
+    </li>
+    <li class="item">
+      <img src="/images/tris.png">
+      <h3 class="title">Трезубец</h3>
+      <p class="price">20 &#8372/1 шт.</p>
+    </li>
+    <li class="item">
+      <img src="/images/gravina.jpg">
+      <h3 class="title">Тугрики</h3>
+      <p class="price">50 &#8372/1000 тугриков</p>
+    </li>
+
+
+  </ul>
+</body>
+
+</html>
