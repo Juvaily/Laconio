@@ -1,13 +1,6 @@
-.top{
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 550px;
-  background:url(/images/Rectangle.jpg);
-  background-repeat: no-repeat; 
-  background-size:cover;
-  font-family: "montserrat bold";
-  
+.shop{
+  width:90%;
+  margin:0 auto;
 }
 .top .ads{
   display:flex;
@@ -25,13 +18,17 @@
 h3{
   font-family: 'montserrat bold';
   text-align: center;
-  font-size: 42px;
-  margin-top:70px;
+  font-size: 36px;
+  margin:0;
+  padding-top:70px;
+  color:#C5C5C5;
 }
 .title{
   color:#FF9900;
-  margin: 20px 0 7px 0;
-  font-size: 40px;
+  font-family:"Montserrat";
+  text-align:center;
+  margin: 5px 0 7px 0;
+  font-size: 20px;
 }
 .price{
   font-family: 'montserrat';
@@ -39,31 +36,23 @@ h3{
   font-size: 24px;
   margin: 0;
 }
-.hs img{
-  height:300px;
-  width:300px;
+.hs img,.things img,.com img{
+  height:200px;
+  width:200px;
   object-fit: contain;
 }
-.things img{
-  height:300px;
-   width:300px;
-   object-fit: contain;
-}
-.com img{
-  height:300px;
-  width:300px;
-  object-fit: contain;
-}
+
 
 .hs, .things, .com{
   display:grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 270px);
-  gap:46px;
+  gap:20px;
   padding:0;
   margin:0;
 }
 .item{
   display:flex;
+  align-items: center;
   flex-direction:column;
 }

@@ -1,0 +1,54 @@
+.btn {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+}
+.btn span,.btn span:after,.btn span:before{
+    position: absolute;
+    top: 50%;
+    margin-top: -3px;
+    left: 50%;
+    width: 80px;
+    height: 6px;
+    transition: 0.1s;
+    
+}
+.btn span{
+    margin-left: -40px;
+    background-color: #FF9900;  
+}
+.btn span:after {
+    margin-left: -5px;
+    background-color: #FF9900;
+    
+}
+.btn span::before{
+    margin-left: -20px;
+    background-color: #FF9900;
+}
+.btn span::after,
+.btn span:before {
+    content: "";
+}
+
+.btn span::after {
+    transform: translateY(18px);
+}
+
+.btn span::before {
+    transform: translateY(-18px);
+}
+.btn_active span::before{
+    transform: rotate(45deg);
+    transition: 0.1s;
+    margin-left: -50px;
+}
+.btn_active span::after{
+    transform: rotate(-45deg);
+    transition: 0.1s;
+    margin-left: -50px;
+}
+.btn_active span{
+    height:0;
+}
