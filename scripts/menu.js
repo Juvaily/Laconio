@@ -1,6 +1,7 @@
 $('.btn').on('click',function(e){
     e.preventDefault;
     $(this).toggleClass('btn_active');
-    $('nav').toggleClass('menu_side')
-    $('.body').toggleClass('body_hide')
+    $('#vert').toggleClass('menu_side_hide');
+    $('#vert').toggleClass('menu_side');
+    //$('#overlay').toggleClass('body_hide')
 });

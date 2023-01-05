@@ -1,58 +1,122 @@
-.shop{
-  width:90%;
-  margin:0 auto;
+.shop {
+  height: 100%;
+  width: 1000px;
+  margin: 0 auto;
 }
-.top .ads{
-  display:flex;
-  align-content:center;
- 
+
+.top .ads {
+  display: flex;
+  align-content: center;
+
 }
-.top .ads p{
-  padding:20px;
+
+.top .ads p {
+  padding: 20px;
   font-size: 36px;
 }
-.top .greet{
- padding:20px;
- font-size: 32px;
+
+.top .greet {
+  padding: 20px;
+  font-size: 32px;
 }
-h3{
+
+h3 {
   font-family: 'montserrat bold';
   text-align: center;
   font-size: 36px;
-  margin:0;
-  padding-top:70px;
-  color:#C5C5C5;
+
+  margin: 30px 0 0 0;
+  color: #C5C5C5;
 }
-.title{
-  color:#FF9900;
-  font-family:"Montserrat";
-  text-align:center;
-  margin: 5px 0 7px 0;
-  font-size: 20px;
-}
-.price{
-  font-family: 'montserrat';
+
+.title {
+  color: #FF9900;
+  font-family: "Montserrat";
   text-align: center;
-  font-size: 24px;
-  margin: 0;
+  font-size: 20px;
+  margin:5px;
 }
-.hs img,.things img,.com img{
-  height:200px;
-  width:200px;
+
+.item img {
+  height: 300px;
+  width: 250px;
   object-fit: contain;
+
 }
 
-
-.hs, .things, .com{
-  display:grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, 270px);
-  gap:20px;
-  padding:0;
-  margin:0;
+.item {
+  position: relative;
+  transition: 400ms;
+  transform:rotate3d(0.5,1,0.1,35deg);
+  padding: 50px;
 }
-.item{
-  display:flex;
-  align-items: center;
-  flex-direction:column;
+
+.item .overlay {
+  top: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(21, 18, 18, 0.7);
+}
+
+.slick-center .overlay {
+  transition: 400ms;
+  scale: 1.1;
+  background: rgba(21, 18, 18, 0);
+}
+
+.slick-center{
+  transition: 200ms;
+  scale: 1.2;
+  transform:rotate3d(0,0,0,0);
+
+}
+.slick-center~.item{
+  transform:rotate3d(0.5,-1,0.1,-35deg);
+}
+@media screen and (max-width: 1100px) {
+  .shop {
+    width: 70%;
+  }
+}
+.buy {
+  display: flex;
+  flex-wrap: wrap;
+}
+.window{
+  position:fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width:60%;
+  height:60%;
+  background:rgb(167, 66, 66) ;
+}
+form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+form input, select {
+  margin: 30px 35px 0 35px;
+  width: 535px;
+  height: 96px;
+  border: 3px solid transparent;
+  border-radius: 5px;
+  background: transparent;
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 400;
+  font-size: 36px;
+  border-bottom: 3px solid #FF9900;
+  color:#C5C5C5;
+  text-align:center;
+}
+form input:nth-child(4){
+  font-family: 'Montserrat Bold';
+  font-size: 48px;
+  background: #FF9900;
+  color:white;
+  font-style: normal;
 }
