@@ -1,6 +1,5 @@
 <?php 
 function avatar($username, $avatar, $id){
-    echo '<li class ="button" id="avatar"><a>' . $username .'</a>';
         if ($avatar!=null) {
           $extention = is_animated($avatar);
           echo '<img id="ds" src="https://cdn.discordapp.com/avatars/' . $id . '/' . $avatar . $extention.'">';

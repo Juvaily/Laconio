@@ -1,0 +1,36 @@
+.container-dashboard{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(1vw + 1em);
+  color: #C5C5C5;
+  width: 60vw;
+}
+
+input, textarea{
+  border: #C5C5C5 solid 2px;
+  font-size: calc(1vw + 0.5em);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: transparent;
+  font-family: monospace;
+  color:#C5C5C5;
+  margin: 5px;
+  width: 100%;
+  max-width: 40vw;
+}
+textarea{
+  width: 100%;
+  height: auto;
+  overflow: hidden
+}
+
+

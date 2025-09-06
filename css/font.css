@@ -1,4 +1,9 @@
 @font-face {
+    font-family: "Minecraft";
+    src: url("../fonts/minecraft/minecraft.ttf");
+    font-style: normal;
+}
+@font-face {
     font-family: "Montserrat";
     src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
     font-style: normal;

@@ -1,9 +1,18 @@
+
 <?php
+$username = 'local';
+$password = '123';
+$servername = 'MySQL-8.0';
+try{
+// Check connection
+$conn = new PDO("mysql:host=$servername;info_news", $username, $password);
+// set the PDO error mode to exception
+$pdo_options = [
+   PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+];
 
-   $db_name = 'mysql:host=localhost;dbname=blog_db';
-   $user_name = 'root';
-   $user_password = '';
-
-   $conn = new PDO($db_name, $user_name, $user_password);
-
+}
+catch(PDOException $e) {
+   echo "Connection failed: " . $e->getMessage();
+   }
 ?>

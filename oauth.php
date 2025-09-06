@@ -133,4 +133,12 @@ function get_guild()
     $results = json_decode($response, true);
     return $results;
 }
+function roles(){
+  $role = 'user';
+  if (in_array('1006980355523354655', $_SESSION['guilds']['roles'])) //теневое правительство
+  {
+    $role = 'Теневое правительство';
+  }
+  return $role;
+}
 

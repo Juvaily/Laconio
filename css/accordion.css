@@ -1,0 +1,41 @@
+.accordion {
+    display: flex;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+    justify-content: space-between;
+    background-color: #171615;
+    color: #C5C5C5;
+    cursor: pointer;
+    padding: 1%;
+    border-bottom: #FF9900 2px solid;
+    width: 100%;
+    outline: none;
+    font-size: calc(1vw + 1em);
+    transition: 0.4s;
+  }
+  .accordion::after {
+    content: "+";
+    color: #FF9900;
+  }
+  .active::after {
+    content: "-";
+    text-align: right;
+  
+  }
+  .accordion:hover,.active {
+    color: #FF9900;
+    z-index: 2;
+  }
+  
+  .panel {
+    display: none;
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #171615;
+    overflow: hidden;
+    width: 100%;
+    border-bottom: #FF9900 2px solid;
+    z-index: 3;
+  }
