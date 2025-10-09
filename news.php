@@ -25,56 +25,9 @@ if (!is_null($conn)) {
 </head>
 
 <body>
-  <header>
-    <nav>
-      <span class="brand">
-        <a href="https://laconio.me/"><img class="logo" src="images/Загогулина.svg"></a>
-      </span>
-      <ul class="menu">
-        <li class="button">
-          <a href="https://laconio.tebex.io/">Магазин</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Правила</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Wiki</a>
-        </li>
-        <li class="button">
-          <a href="https://map.laconio.me" target="_blank">Карта</a>
-        </li>
-      </ul>
-      <?php
-      if (session('access_token')) {
-        $user = apiRequest($apiURLBase);
-        if (roles() == 'user') //теневое правительство
-        {
-          echo '<div class ="button" id="avatar"><a>' . $user->username . '</a>';
-          avatar($user->username, $user->avatar, $user->id);
-          echo '</div>';
-          echo '<div if="login"><a href="?action=logout">Выйти</a>
-        </div>';
-        } else if (roles() == 'Теневое правительство') {
-
-          echo '<div class ="button" id="avatar"><a>' . $user->username . '</a>';
-          avatar($user->username, $user->avatar, $user->id);
-          echo '</div>';
-          echo '<div><a href="?action=logout">Выйти админу</a>
-        </div>';
-        }
-      } else {
-        echo '<button class="learn-more">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">
-          <a href="?action=login">Войти</a>
-        </span>
-        </button>';
-      }
-      ?>
-    </nav>
-  </header>
+  <?php  include(__DIR__ . '\components\header.php'); 
+    if (session('access_token')) {
+         if (roles() == 'Теневое правительство') { ?>
   <section class="container-news">
     <?php
     foreach ($articles as $key => $article): ?>
@@ -91,7 +44,8 @@ if (!is_null($conn)) {
             <p class="text-news"><?= $article->exerpt ?></p>
         </span>
       </div>
-    <?php endforeach ?>
+    <?php endforeach; ?>
+    <?php }}?>
   </section>
   <ul class="pages">
     <li><a href="">&laquo; Пред.</a></li>
@@ -100,14 +54,5 @@ if (!is_null($conn)) {
     <li><a href="">3</a></li>
     <li><a href="">След. &raquo;</a></li>
   </ul>
-  <footer>
-    <div>
-      <p>IP: <span style="color: #FF9900;">play.laconio.me</span></p>
-      <p>Версия 1.19.4</p>
-    </div>
-    <div>
-      <img class="logo" src="images/Фиуме.jpg">
-    </div>
-    <p> <?php echo "Laconio &copy; 2021-" . date("Y"); ?></p>
-  </footer>
+<?php  include(__DIR__ . '\components\footer.php'); ?> 
 </body>

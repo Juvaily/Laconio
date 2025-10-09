@@ -2,7 +2,6 @@
     display: flex;
     text-align: left;
     position: relative;
-    z-index: 1;
     justify-content: space-between;
     background-color: #171615;
     color: #C5C5C5;
@@ -23,9 +22,8 @@
     text-align: right;
   
   }
-  .accordion:hover,.active {
+  .accordion:hover,.active-acc {
     color: #FF9900;
-    z-index: 2;
   }
   
   .panel {
@@ -37,5 +35,4 @@
     overflow: hidden;
     width: 100%;
     border-bottom: #FF9900 2px solid;
-    z-index: 3;
   }

@@ -11,59 +11,11 @@ include(__DIR__ . '\functions\avatar.php');
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/button.css">
-  <script src="functions/login.js"></script>
   <title>Document</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="https://laconio.me/"><img class="logo" src="images/Загогулина.svg"></a>
-      <ul class="menu">
-        <li class="button">
-          <a href="https://laconio.tebex.io/">Магазин</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Правила</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Wiki</a>
-        </li>
-        <li class="button">
-          <a href="https://map.laconio.me" target="_blank">Карта</a>
-        </li>
-      </ul>
-      <?php
-        if (session('access_token')) {
-          $user = apiRequest($apiURLBase);
-          if (roles() == 'user') //теневое правительство
-          {
-            echo '<div class ="button" id="avatar"><a>' . $user->username . '</a>';
-            avatar($user->username, $user->avatar, $user->id);
-            echo '</div>';
-            echo '<div if="login"><a href="?action=logout">Выйти</a>
-        </div>';
-          } else if (roles() == 'Теневое правительство') {
-
-            echo '<p class ="button" id="avatar"><a>' . $user->username . '</a>';
-            avatar($user->username, $user->avatar, $user->id);
-            echo '</p>';
-            echo '<p><a href="?action=logout">Выйти админу</a></p>';
-          }
-        } else {
-          echo '<button class="learn-more">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">
-          <a href="?action=login">Войти</a>
-        </span>
-        </button>';
-        }
-
-        ?>
-    </nav>
-  </header>
+  <?php  include(__DIR__ . '\components\header.php'); ?> 
   <section class="container">
     <article>
       <p class="text-box text-main">
@@ -74,7 +26,7 @@ include(__DIR__ . '\functions\avatar.php');
 
     </article>
     <article>
-      <p class="text-box text-main">На сервере есть собственная система уровней, механика колоний транспорт, огнестрельное оружие, а также кастомные напитки и картины
+      <p class="text-box text-main">На сервере есть собственная система шахт и заводов, транспорт, огнестрельное оружие, а также кастомные напитки и картины
       </p>
 
       <img class="main_img" src="images/ship.jpg">
@@ -82,7 +34,7 @@ include(__DIR__ . '\functions\avatar.php');
 
     <article>
       <p class="text-box text-main">
-        &#619; Лакоины - валюта для покупки товаров и привилегий на
+        &#321; Лакоины - валюта для покупки товаров и привилегий на
         нашем сервере. Лакоины приобретаются в магазине. При помощи команды /donate можно приобрести наборы, подписки
         или предметы за лакоины
       </p>
@@ -100,20 +52,9 @@ include(__DIR__ . '\functions\avatar.php');
     </article>
 
   </section>
-  <footer>
-    <div>
-      <p>IP: <span style="color: #FF9900;">play.laconio.me</span></p>
-      <p>Версия 1.19.4</p>
-    </div>
-    <div>
-      <img class="logo" src="images/Слой_1.svg">
-      <img class="logo" src="images/впи.jpg">
-      <img class="logo" src="images/tyan.jpg">
-    </div>
-    <p> <?php echo "Laconio &copy; 2021-" . date("Y"); ?></p>
-  </footer>
+<?php  include(__DIR__ . '\components\footer.php'); ?> 
 </body>
-
+<script src="../functions/script.js"></script>
 </html>
 <?php
 /*$ftp_server = "93.125.42.181"; // Replace with your FTP server address

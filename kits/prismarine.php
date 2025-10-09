@@ -57,61 +57,8 @@
       </div>
       <div class="item">
         <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
-          <div class="icon-32 air"></div>
-          <p class="item-count">64</p>
-        </div>
-      </div>
-      <div class="item">
-        <div class="inventory-slot">
           <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
           </div>
           <p class="item-count">64</p>
         </div>
@@ -119,6 +66,7 @@
       <div class="item">
         <div class="inventory-slot">
           <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
           </div>
           <p class="item-count">64</p>
         </div>
@@ -126,6 +74,79 @@
       <div class="item">
         <div class="inventory-slot">
           <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">
+          </div>
+          <p class="item-count">64</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="inventory-slot">
+          <div class="icon-32 air">
+            <img src="/images/items/prismarine.webp">   
           </div>
           <p class="item-count">64</p>
         </div>

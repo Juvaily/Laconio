@@ -1,4 +1,4 @@
-<button class="accordion">Цветной, цена: 99 Ł</button>
+<button class="accordion">Цветочный, цена: 99 Ł</button>
   <article class="panel kits">
     <summary class="inventory">
       <div class="item">

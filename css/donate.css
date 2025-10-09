@@ -32,7 +32,7 @@
 }
 .item-desc{
     position: absolute;
-    z-index: 15;
+    z-index: 5;
     display: none;
     text-shadow: 2px 2px 0 #3F3F3F;
     width: 160px;
@@ -58,7 +58,6 @@
     font-weight: lighter !important;
     color: #FFF !important;
     text-shadow: 2px 2px 0 #3F3F3F;
-    z-index: 2;
 }
 .item:hover .item-desc{
     display: inline-block;

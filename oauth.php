@@ -4,7 +4,6 @@ ini_set('display_startup_errors', 1);
 ini_set('max_execution_time', 300); //300 seconds = 5 minutes. In case if your CURL is slow and is loading too much (Can be IPv6 problem)
 
 error_reporting(E_ALL);
-
 define('OAUTH2_CLIENT_ID', '1337889537355153551');
 define('OAUTH2_CLIENT_SECRET', 'D0-kdGzAJOYxq9OiZxvS-CagDwqqr59Y');
 
@@ -14,6 +13,8 @@ $apiURLBase = 'https://discord.com/api/users/@me';
 $revokeURL = 'https://discord.com/api/oauth2/token/revoke';
 
 session_start();
+$refresh_interval_seconds = 30;
+
 
 // Start the login process by sending the user to Discord's authorization page
 if (get('action') == 'login') {
@@ -48,7 +49,7 @@ if (get('code')) {
 
   $logout_token = $token->access_token;
   $_SESSION['access_token'] = $token->access_token;
-  
+
   $_SESSION['guilds'] = get_guild();
 
   header('Location: ' . $_SERVER['PHP_SELF']);
@@ -116,24 +117,26 @@ function session($key, $default = NULL)
 {
   return array_key_exists($key, $_SESSION) ? $_SESSION[$key] : $default;
 }
-function get_guild()
-{
+  function get_guild()
+  {
     $url = "https://discord.com/api/users/@me/guilds/551700336864264192/member";
     $ch = curl_init();
     curl_setopt_array($ch, array(
-        CURLOPT_URL            => $url,
-        CURLOPT_HTTPHEADER     => array('Authorization: Bearer ' . session('access_token')),
-        CURLOPT_RETURNTRANSFER => 1,
-        CURLOPT_FOLLOWLOCATION => 1,
-        CURLOPT_VERBOSE        => 1,
-        CURLOPT_SSL_VERIFYPEER => 0,
+      CURLOPT_URL            => $url,
+      CURLOPT_HTTPHEADER     => array('Authorization: Bearer ' . session('access_token')),
+      CURLOPT_RETURNTRANSFER => 1,
+      CURLOPT_FOLLOWLOCATION => 1,
+      CURLOPT_VERBOSE        => 1,
+      CURLOPT_SSL_VERIFYPEER => 0,
     ));
     $response = curl_exec($ch);
-    curl_close($ch); 
+    curl_close($ch);
     $results = json_decode($response, true);
     return $results;
-}
-function roles(){
+  }
+
+function roles()
+{
   $role = 'user';
   if (in_array('1006980355523354655', $_SESSION['guilds']['roles'])) //теневое правительство
   {
@@ -141,4 +144,3 @@ function roles(){
   }
   return $role;
 }
-

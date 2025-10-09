@@ -18,54 +18,7 @@ include(__DIR__.'\functions\avatar.php');
 </head>
 
 <body>
-  <header>
-    <nav>
-      <a href="https://laconio.me/"><img class="logo" src="images/Загогулина.svg"></a>
-      <ul class="menu">
-        <li class="button">
-          <a href="https://laconio.tebex.io/">Магазин</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Правила</a>
-        </li>
-        <li class="button">
-          <a href="https://laconio.me/rules">Wiki</a>
-        </li>
-        <li class="button">
-          <a href="https://map.laconio.me" target="_blank">Карта</a>
-        </li>
-      </ul>
-      <?php
-        if (session('access_token')) {
-          $user = apiRequest($apiURLBase);
-          if (roles() == 'user') //теневое правительство
-          {
-            echo '<div class ="button" id="avatar"><a>' . $user->username . '</a>';
-            avatar($user->username, $user->avatar, $user->id);
-            echo '</div>';
-            echo '<div if="login"><a href="?action=logout">Выйти</a>
-        </div>';
-          } else if (roles() == 'Теневое правительство') {
-
-            echo '<p class ="button" id="avatar"><a>' . $user->username . '</a>';
-            avatar($user->username, $user->avatar, $user->id);
-            echo '</p>';
-            echo '<p><a href="?action=logout">Выйти админу</a></p>';
-          }
-        } else {
-          echo '<button class="learn-more">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">
-          <a href="?action=login">Войти</a>
-        </span>
-        </button>';
-        }
-
-        ?>
-    </nav>
-  </header>
+  <?php  include(__DIR__ . '\components\header.php'); ?> 
     <section class="container-dashboard">
         <form action="" method="post" class="signin">
           <label>Заголовок</label>
@@ -90,18 +43,7 @@ include(__DIR__.'\functions\avatar.php');
            </table>
         </form>
     </section>
-  <footer>
-    <div>
-      <p>IP: <span style="color: #FF9900;">play.laconio.me</span></p>
-      <p>Версия 1.19.4</p>
-    </div>
-    <div>
-      <img class="logo" src="images/Слой_1.svg">
-      <img class="logo" src="images/впи.jpg">
-      <img class="logo" src="images/tyan.jpg">
-    </div>
-    <p> <?php echo "Laconio &copy; 2021-" . date("Y"); ?></p>
-  </footer>
+  <?php  include(__DIR__ . '\components\footer.php'); ?> 
 
 </body>
 

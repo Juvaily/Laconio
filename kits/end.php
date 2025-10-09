@@ -1,4 +1,4 @@
-<button class="accordion">Энд, цена: 200 Ł</button>
+<button class="accordion">Энд, цена: 150 Ł</button>
   <article class="panel kits">
     <summary class="inventory">
       <div class="item">

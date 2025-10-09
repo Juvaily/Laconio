@@ -6,78 +6,60 @@ include(__DIR__ . '\functions\avatar.php');
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="css/button.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/news.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/button.css">
+  <link rel="stylesheet" href="css/accordion.css">
+  <title>Document</title>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <a href="https://laconio.me/"><img class="logo" src="images/Загогулина.svg"></a>
-            <ul class="menu">
-                <li class="button">
-                    <div class="slide"></div><a href="https://laconio.tebex.io/">Магазин</a>
-                </li>
-                <li class="button">
-                    <div class="slide"></div><a href="https://laconio.me/rules">Правила</a>
-                </li>
-                <li class="button">
-                    <div class="slide"></div><a href="https://laconio.me/rules">Wiki</a>
-                </li>
-                <li class="button">
-                    <div class="slide"></div><a href="https://map.laconio.me" target="_blank">Карта</a>
-                </li>
-            </ul>
-            <?php
-            if (session('access_token')) {
-                $user = apiRequest($apiURLBase);
-                if (roles() == 'user') //теневое правительство
-                {
-                    echo '<div class ="button" id="avatar"><a>' . $user->username . '</a>';
-                    avatar($user->username, $user->avatar, $user->id);
-                    echo '</div>';
-                    echo '<div if="login"><a href="?action=logout">Выйти</a>
-        </div>';
-                } else if (roles() == 'Теневое правительство') {
-
-                    echo '<p class ="button" id="avatar"><a>' . $user->username . '</a>';
-                    avatar($user->username, $user->avatar, $user->id);
-                    echo '</p>';
-                    echo '<p><a href="?action=logout">Выйти админу</a></p>';
-                }
-            } else {
-                echo '<button class="learn-more">
-        <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-        </span>
-        <span class="button-text">
-          <a href="?action=login">Войти</a>
-        </span>
-        </button>';
-            }
-
-            ?>
-        </nav>
-    </header>
-    <section class="container">
-
-    </section>
-    <footer>
-        <div>
-            <p>IP: <span style="color: #FF9900;">play.laconio.me</span></p>
-            <p>Версия 1.19.4</p>
-        </div>
-        <div>
-            <img class="logo" src="images/Фиуме.jpg">
-            <img class="logo" src="images/Фиуме.jpg">
-
-        </div>
-        <p> <?php echo "Laconio &copy; 2021-" . date("Y"); ?></p>
-    </footer>
+  <?php include(__DIR__ . '\components\header.php'); ?>
+  <section class="container">
+    <button class="accordion">Основные правила для игроков</button>
+    <article class="panel">
+      <p class="text-news">1.1. Игрок, зарегистрировавшийся и играющий на сервере автоматически соглашается соблюдать правила и обязан с ними ознакомиться.</p>
+      <p class="text-news">1.2. Незнание правил не освобождает от ответственности за исключением ситуаций определяемых администрацией сервера.</p>
+      <p class="text-news">1.3. Администрация сервера в праве принимать меры по пресечению и устранению проблем, которые не предусмотрены правилами, но по тем или иным причинам негативно сказываются на игровом процессе при условии последующего внесения соответствующего запрета в правила.</p>
+      <p class="text-news">1.4. Администрация сервера может снимать или уменьшать наказания предусмотренные всеми описанными тут правилами в исключительных ситуациях определяемых самой администрацией.</p>
+      <p class="text-news">2. Запрещено использование одним игроком больше одного игрового аккаунта на сервере, наличие нескольких игровых аккаунтов является причиной для перманентного бана на сервере.</p>
+      <p class="text-news">2.1. Исключением является наличие нескольких аккаунтов на разных платформах у одного игрока, использование нескольких аккаунтов администрацией сервера в технических задачах и в других ситуациях определяемых администрацией сервера.</p>
+    </article>
+  </section>
+  <section class="container">
+    <button class="accordion">Правила игрового чата</button>
+    <article class="panel">
+      <p class="text-news">3. Оскорбления и/или провокации, написание текста капсом и флуд (спам однообразными, либо же бессодержательными сообщениями, рекламой не согласованной с администрацией сервера) запрещены.
+      За нарушение предусматривается: Мут на произвольное количество времени вплоть до нескольких суток или блокировка в чате в зависимости от решения администрации.</p>
+      <p class="text-news">4. Обман, лжесвидетельствование или дезинформация администрации сервера запрещены, за исключением игровых ситуаций, где администратор выступает в роли простого игрока.
+      За нарушение предусматривается: штраф или блокировка на проивольное количество времени в зависимости от решения администрации.</p>
+      <p class="text-news">5. Использование ников схожих или практически идентичных с никами членов администрации сервера запрещено.
+      За нарушение предусматривается: Блокирование на сервере до момента смены ника в случае, если соответствующие просьбы со стороны администрации были проигнорированы.</p>
+      <p class="text-news">6. Использование команды /report по вопросам не связанным с обнаружением ошибок и недочётов работы сервера запрещается.
+      За нарушение предусматривается: мут на 15 минут по усмотрению администрации.</p>
+    </article>
+  </section>
+  <section class="container">
+    <button class="accordion">Игровые правила: города</button>
+    <article class="panel">
+      <p class="text-news">7. При выборе имени города или нации допускаются лишь названия на кириллице и латинице.
+      За нарушение предусматривается: Удаление города и/или нации если предупреждения и просьбы администрации о переименовании были проигнорированы.</p>
+      <p class="text-news">8. Запрещено окружение чужих городов приватом своего города за исключением наличия тесных границ.
+      За нарушение предусматривается: деприват границ подпадающих под правило и штраф в размере определяемом администрацией.</p>
+    </article>
+  </section>
+  <section class="container">
+    <button class="accordion">Игровые правила: прочее</button>
+    <article class="panel">
+      <p class="text-news">9. Запрещается использование чит-ресурсов, клиентов, ресурс-паков и шейдер-паков как для обхода технических ограничений сервера, так и для превосходства над другими игроками в игровом процессе.За нарушение предусматривается: Перманентный бан за исключением ситуаций определяемых администрацией в зависимости от серьезности нарушения.</p>
+      <p class="text-news">10. Дюп предметов, строительство и использование AFK-рыбалки, лаг-машин и прочих механизмов препятствующих стабильной работе сервера и портящих игровой процесс запрещено.</p>
+    </article>
+  </section>
+  <?php include(__DIR__ . '\components\footer.php'); ?>
 </body>
+<script src="../functions/script.js"></script>
 
 </html>
